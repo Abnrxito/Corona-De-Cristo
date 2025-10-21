@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #fff9f8;
+  color: #333;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* 🟥 Encabezado hero */
+header.hero {
+  position: relative;
+  background: linear-gradient(135deg, #b91c1c, #e11d48, #f87171);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+}
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* 🔸 Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #f3c4c4;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  color: #b91c1c;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+}
+.navbar a:hover {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+/* 🪴 Contenedor */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #b91c1c;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* 🌿 Secciones en cuadrícula */
+.grid {
+  display: grid;
+  gap: 25px;
+}
+.reverse {
+  direction: rtl;
+}
+.reverse > * {
+  direction: ltr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 🌼 Imágenes */
+img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ❤️ Botones */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #b91c1c, #e11d48);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* 🌸 Listas */
+.list {
+  list-style: none;
+  line-height: 1.8;
+}
+
+/* 🔻 Pie de página */
+footer {
+  text-align: center;
+  background: linear-gradient(90deg, #7f1d1d, #b91c1c);
+  color: white;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 4px solid #ef4444;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
